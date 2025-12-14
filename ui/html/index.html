@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conformal Map Lab 17</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Конформное отображение (Вариант 17)</h1>
+        <p>Z = C \ [0, i] &rarr; W = Сектор (π/4, 3π/4)</p>
+    </div>
+
+    <div class="controls">
+        <div class="input-group">
+            <label for="pointCount">Количество точек:
+                <input type="number" id="pointCount" value="5000" min="100" max="1000000000">
+            </label>
+        </div>
+        <div class="button-group">
+            <button id="runSingleBtn">Выполнить в одном потоке</button>
+            <button id="runParallelBtn">Выполнить многопоточно</button>
+        </div>
+        <div id="duration" class="duration">Готов к вычислениям</div>
+    </div>
+
+    <div class="canvas-container">
+        <div class="canvas-wrapper">
+            <h3>Плоскость Z (вход)</h3>
+            <canvas id="canvasZ"></canvas>
+            <div class="overlay">Разрез [0, i]</div>
+        </div>
+        <div class="canvas-wrapper">
+            <h3>Плоскость W (образ)</h3>
+            <canvas id="canvasW"></canvas>
+        </div>
+    </div>
+
+    <script type="module" src="/static/js/app.js"></script>
+</body>
+</html>
